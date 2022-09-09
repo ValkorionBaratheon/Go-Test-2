@@ -10,7 +10,6 @@ import (
 
 func main() {
 	// a. Takes an integer from the command line.
-	fmt.Println("Enter an integer: \n")
 	value := os.Args[1]
 	input, err := strconv.Atoi(value)
 
@@ -27,7 +26,7 @@ func main() {
 	t := time.Now()
 	elapsed := t.Sub(start)
 	fmt.Println("The sum of these %d random numbers is: %d\n", input, sum)
-	fmt.Println("The time it took is: %d\n\n", elapsed)
+	fmt.Println("The time it took is: %d\n", elapsed)
 
 	// d. Use go-routines
 	c := make(chan int)
