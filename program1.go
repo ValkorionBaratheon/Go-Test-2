@@ -40,9 +40,11 @@ func main() {
 	x, y := <-c, <-c
 	var sumPar int = x + y
 	tP := time.Now()
-	elapsedP := t.Sub(start)
+	elapsedP := tP.Sub(startP)
 	fmt.Println("The sum using Go-Routines of these %d random numbers is: %d\n", input, sumPar)
 	fmt.Println("The time it took is: %d\n", elapsedP)
+
+	fmt.Println("Error variable: %s", err)
 }
 
 func sumRandom(sl []int, c chan int) {
